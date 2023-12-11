@@ -29,7 +29,6 @@ public class Moyenne {
     /**
      * Vérifie si toutes les notes sont bien comprises entre 0 et 20
      * @param notes double : les notes
-     * @throws IllegalAccessException : si les valeurs sont incorrectes
      */
     private static void verifierSiNotesCorrectes(double[] notes) throws IllegalArgumentException {
         for (double note: notes) {
@@ -42,11 +41,10 @@ public class Moyenne {
     /**
      * Lève une exception si le nombre de notes est différent de trois.
      * @param notes double : Le carnet de notes de l'élève
-     * @throws IllegalAccessException si n'a pas trois notes
      */
-    private static void verifierSiContientTroisNotes(double[] notes) throws IllegalAccessException {
+    private static void verifierSiContientTroisNotes(double[] notes) throws IllegalArgumentException {
         if (notes.length != 3) {
-            throw new IllegalAccessException("Il doit y avoir 3 notes !!");
+            throw new IllegalArgumentException("Il doit y avoir 3 notes !!");
         }
     }
 }
