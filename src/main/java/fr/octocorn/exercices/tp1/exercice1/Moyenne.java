@@ -16,8 +16,8 @@ public class Moyenne {
      * @param notes double - notes
      * @return double - la moyenne de l'élève
      */
-    private static int calculerMoyenne(double[] notes) {
-        int somme = 0;
+    private static double calculerMoyenne(double[] notes) {
+        double somme = 0;
 
         for (double note: notes) {
             somme += note;
